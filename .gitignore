@@ -1,32 +1,48 @@
-# Prerequisites
-*.d
+// Corey Vick Jr
+// 9.27.20
+/*calculate the money that the school raised*/
+//library
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+//Main Function
+int main()//Function Header
+ {//Beginning Function
 
-# Precompiled Headers
-*.gch
-*.pch
+  //input values of each coin
+  double PEN, DIM, NIK, QUA, SAVED, SAVED1, SAVED2, SAVED3, SAVEDT;
+  int pen, dim, nik, qua;
+  PEN = .01;
+  NIK = .05;
+  DIM = .10;
+  QUA = .25;
+  cout << "Enter amount of pennies: ";
+  cin >> pen;
+  cout << "Enter amount of nickels: ";
+  cin >> nik;
+  cout << "Enter amount of dimes: ";
+  cin >> dim;
+  cout << "Enter amount of quaters: ";
+  cin >> qua;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+  //caluate each group of coins 
+  SAVED = PEN * pen;
+  SAVED1 = NIK * nik;
+  SAVED2 = DIM * dim;
+  SAVED3 = QUA * qua;
+  SAVEDT= SAVED + SAVED1 + SAVED2 + SAVED3;
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+  //printout the values of how much each coin made
+  cout << fixed << setprecision (2);
+  cout << endl;
+  cout << "Coins" << "\t\t" << "Value" << "\t\t\t" << "Saved Value" << endl;
+  cout << "Pennies" << "\t\t" << '$' << PEN << "\t\t\t" << '$' << SAVED << endl;
+  cout << "Nickels" << "\t\t" << '$' << NIK << "\t\t\t" << '$' << SAVED1 << endl;
+  cout << "Dimes" << "\t\t" << '$' << DIM << "\t\t\t" << '$' << SAVED2 << endl;
+  cout << "Quaters" << "\t\t" << '$' << QUA << "\t\t\t" << '$' << SAVED3 << endl;
+  cout << endl << endl;
+  cout << '$' << SAVEDT << " Saved" << endl;
+  
+ return 0;
+ }
